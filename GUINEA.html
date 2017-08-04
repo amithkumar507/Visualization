@@ -1,0 +1,161 @@
+ <html>
+ <head>
+ <style type="text/css">
+ 
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}	
+
+.amcharts-graph-graph2 .amcharts-graph-stroke {
+  stroke-dasharray: 4px 5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: am-moving-dashes 1s linear infinite;
+  animation: am-moving-dashes 1s linear infinite;
+}
+
+@-webkit-keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -28px;
+  }
+}
+@keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -28px;
+  }
+}
+ </style>
+ </head>
+ <script src="amcharts/amcharts.js"></script>
+<script src="amcharts/serial.js"></script>
+<script src="amcharts/themes/light.js"></script>
+<div id="chartdiv"></div>	
+<div>
+
+<form action="C:/Users/AMITH KUMAR/Desktop/661 Project/Visualization.html">
+    <input type="submit" value="Back">
+</form>
+
+</div>
+
+
+		
+<script type="text/javascript">
+var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "addClassNames": true,
+  "theme": "light",
+  "autoMargins": false,
+  "marginLeft": 30,
+  "marginRight": 8,
+  "marginTop": 10,
+  "marginBottom": 26,
+  "balloon": {
+    "adjustBorderColor": false,
+    "horizontalPadding": 10,
+    "verticalPadding": 8,
+    "color": "#ffffff"
+  },
+
+  "dataProvider": [{
+    "Month": 08,
+    "Total cases": 648,
+    "Total Deaths": 430
+  }, {
+    "Month": 09,
+    "Total cases": 426,
+    "Total Deaths": 218
+  }, {
+    "Month": 10,
+    "Total cases": 593,
+    "Total Deaths": 370
+  }, {
+    "Month": 11,
+    "Total cases": 467,
+    "Total Deaths": 242
+  }, {
+    "Month": 12,
+    "Total cases": 573,
+    "Total Deaths": 449,
+  }, {
+    "Month": 01,
+    "Total cases": 210,
+    "Total Deaths": 201,
+  }, {
+    "Month": 02,
+    "Total cases": 238,
+    "Total Deaths": 181,
+  }, {
+    "Month": 03,
+    "Total cases": 274,
+    "Total Deaths": 172,
+  }, {
+    "Month": 04,
+    "Total cases": 155,
+    "Total Deaths": 114,
+  }, {
+    "Month": 05,
+    "Total cases": 57,
+    "Total Deaths": 43,
+  }, {
+    "Month": 06,
+    "Total cases": 77,
+    "Total Deaths": 53,
+  }, {
+    "Month": 07,
+    "Total cases": 68,
+    "Total Deaths": 47,
+  }, {
+    "Month": 08,
+    "Total cases": 8,
+    "Total Deaths": 7,
+    "dashLengthColumn": 5,
+    "alpha": 0.2,
+    "additional": "(projection)"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "alphaField": "alpha",
+    "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+    "fillAlphas": 1,
+    "title": "Total cases",
+    "type": "column",
+    "valueField": "Total cases",
+    "dashLengthField": "dashLengthColumn"
+  }, {
+    "id": "graph2",
+    "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+    "bullet": "round",
+    "lineThickness": 3,
+    "bulletSize": 7,
+    "bulletBorderAlpha": 1,
+    "bulletColor": "#FFFFFF",
+    "useLineColorForBulletBorder": true,
+    "bulletBorderThickness": 3,
+    "fillAlphas": 0,
+    "lineAlpha": 1,
+    "title": "Total Deaths",
+    "valueField": "Total Deaths"
+  }],
+  "categoryField": "Month",
+  "categoryAxis": {
+    "gridPosition": "start",
+    "axisAlpha": 0,
+    "tickLength": 0
+  },
+  "export": {
+    "enabled": true
+  }
+});
+</script>
+<body><center>
+<h1><font color="red">Guinea Visualization </font></h1>
+<h2>[ X-axis: Months && Y-axis: Population ] </h2></center>
+</body>
+</html>
